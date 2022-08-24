@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
-import AddTodoForm from './AddTodoForm';
-import TodoList from './TodoList';
-import './TodoListItem.module.css';
+import Navbar from './components/Navbar';
+import AddTodoForm from './components/AddTodoForm';
+import TodoList from './components/TodoList';
+import './components/App.css';
 
 const useSemiPersistentState = () => {
 	const [todoList, setTodoList] = React.useState(
@@ -29,7 +29,7 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div className='App'>
 			<Navbar />
 			<h1>ToDo List</h1>
 			<AddTodoForm onAddTodo={addTodo} />

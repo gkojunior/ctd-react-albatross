@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const InputWithLabel = ({
 	children,
@@ -23,6 +24,10 @@ const InputWithLabel = ({
 			/>
 		</>
 	);
+};
+
+InputWithLabel.prototype = {
+	handleTitleChange: PropTypes.func,
 };
 
 export default InputWithLabel;

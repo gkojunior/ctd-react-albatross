@@ -1,0 +1,10 @@
+.ListItem {
+	color:aliceblue;
+	border: 2px rgba(0, 0, 0, 0.827) solid;
+	border-radius: 50px;
+	margin-top: 10px;
+	width: 100%;
+	background-color:rgb(164, 197, 226);
+	box-shadow: 100px;
+
+}

@@ -6,7 +6,6 @@
 }
 
 body {
-	background-color: rgb(184, 184, 184);
 	color: rgb(255, 255, 255);
 	font-size: 1.25rem;
 	font-weight: lighter;
@@ -19,19 +18,23 @@ h1, form, li {
 }
 
 label {
-	color: rgb(0, 0, 0);
+	color:rgb(225, 127, 7);
 }
 
 button {
 	margin: 0.5rem;
-	padding: 5px;
-	background-color: bisque;
+	padding: 10px;
+	background-color:aliceblue;
     font-size: 1rem;
+    border-radius: 50px;
+    color: rgb(225, 127, 7)  ;
 }
 
 input {
-	background-color: bisque;
+	background-color:rgb(164, 197, 226);
 	color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
 /* Navbar */
@@ -43,8 +46,8 @@ header {
 	justify-content: space-between;
 	height: 60px;
 	padding: 0 2rem;
-	background-color: rgba(59, 59, 59, 0.925);
-	color:bisque;
+	background-color: rgb(164, 197, 226);
+	color:rgb(225, 127, 7);
 	position: sticky;
 	top: 0;
 	z-index: 50;
@@ -54,7 +57,7 @@ nav a {
 	margin: 0 2rem;
 	padding: 0 3rem;
 	text-decoration: none;
-    color:bisque;
+    color:rgb(225, 127, 7);
 }
 
 nav a:hover {
