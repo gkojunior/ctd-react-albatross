@@ -1,23 +1,37 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import React, { useEffect } from 'react';
 import AddTodoForm from './components/AddTodoForm';
+import Nav from './components/Nav'
 import TodoList from './components/TodoList';
 import './components/App.css';
-
-const useSemiPersistentState = () => {
-	const [todoList, setTodoList] = React.useState(
-		JSON.parse(localStorage.getItem('savedTodoList'))
-	);
-
-	React.useEffect(() => {
-		localStorage.setItem('savedTodoList', JSON.stringify(todoList));
-	}, [todoList]);
-
-	return [todoList, setTodoList];
-};
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-	const [todoList, setTodoList] = useSemiPersistentState();
+	const [todoList, setTodoList] = React.useState([]);
+	const [isLoading, setIsLoading] = React.useState(true);
+
+	const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default`;
+
+	const options = {
+		method: 'Get',
+		headers: {
+			authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+		},
+	};
+
+	useEffect(() => {
+		fetch(url, options)
+			.then((response) => response.json())
+			.then((data) => {
+				setTodoList(data.records || []);
+				setIsLoading(false);
+			});
+	});
+
+	useEffect(() => {
+		if (!isLoading) {
+			localStorage.setItem('savedTodoList', JSON.stringify(todoList));
+		}
+	}, [todoList, isLoading]);
 
 	const addTodo = (newTodo) => {
 		setTodoList([...todoList, newTodo]);
@@ -29,12 +43,25 @@ function App() {
 	};
 
 	return (
-		<div className='App'>
-			<Navbar />
-			<h1>ToDo List</h1>
-			<AddTodoForm onAddTodo={addTodo} />
-			<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<div>
+							<Nav />
+							<h1>Todo List</h1>
+							<AddTodoForm onAddTodo={addTodo} />
+							{isLoading ? (
+								<p>Loading...</p>
+							) : (
+								<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
+							)}
+						</div>
+					}></Route>
+				<Route path='/new' element={<h1>New Todo List</h1>}></Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
