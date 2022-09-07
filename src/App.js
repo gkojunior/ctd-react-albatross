@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import AddTodoForm from './AddTodoForm';
-import Nav from './Nav'
-import TodoList from './TodoList';
-import './App.css';
+import AddTodoForm from './components/AddTodoForm';
+import Nav from './components/Nav'
+import TodoList from './components/TodoList';
+import './components/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
