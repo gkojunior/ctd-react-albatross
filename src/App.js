@@ -22,7 +22,7 @@ function App() {
 		fetch(url, options)
 			.then((response) => response.json())
 			.then((data) => {
-				setTodoList(data.records || []);
+				setTodoList(data.records);
 				setIsLoading(false);
 			});
 	});
