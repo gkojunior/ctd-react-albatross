@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AddTodoForm from './components/AddTodoForm';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
 import TodoList from './components/TodoList';
 import './components/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,7 +9,7 @@ function App() {
 	const [todoList, setTodoList] = React.useState([]);
 	const [isLoading, setIsLoading] = React.useState(true);
 
-	const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default`;
+	const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default?view=Grid%20view`;
 
 	const options = {
 		method: 'Get',
@@ -51,12 +51,20 @@ function App() {
 						<div>
 							<Nav />
 							<h1>Todo List</h1>
-							<AddTodoForm onAddTodo={addTodo} />
-							{isLoading ? (
-								<p>Loading...</p>
-							) : (
-								<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
-							)}
+
+							<div className='todoContainer'>
+								<div className='todoForm'>
+									<AddTodoForm onAddTodo={addTodo} />
+								</div>
+
+								<div className='todoList'>
+									{isLoading ? (
+										<p>Loading...</p>
+									) : (
+										<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
+									)}
+								</div>
+							</div>
 						</div>
 					}></Route>
 				<Route path='/new' element={<h1>New Todo List</h1>}></Route>

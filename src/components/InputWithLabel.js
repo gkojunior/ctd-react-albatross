@@ -21,6 +21,7 @@ const InputWithLabel = ({
 				name='title'
 				value={todoTitle}
 				onChange={handleTitleChange}
+				placeholder='Enter a Todo'
 			/>
 		</>
 	);
