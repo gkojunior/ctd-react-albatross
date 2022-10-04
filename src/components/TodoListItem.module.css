@@ -1,11 +1,47 @@
-
 .ListItem {
-	color: rgb(2, 4, 6);
-	padding: 20px;
-	display: inline-flex;
-	margin-top: 25px;
+	color: rgb(0, 0, 0);
+	display: block;
+	padding: 10px;
+	font-size: 10px;
+	position: relative;
+	margin: 20px auto;
+	width: 250px;
+}
+.task.reminder {
+	border-left: 5px solid greenyellow
+}
+.checkSquare{
+	color: rgb(19, 112, 118);
+	cursor: pointer;
+	padding-left: 3px;
+}
+.ListItem span {
+	position: absolute;
+	right: 10px
+
 }
 
-.listItemContainer {
-	text-align: center;
+@media only screen and (min-width: 768px) {
+	.ListItem {
+		color: rgb(0, 0, 0);
+		display: block;
+		padding: 10px;
+		font-size: 10px;
+		position: relative;
+		margin: 20px auto;
+		width: 350px;
+	}
+	.checkSquare{
+		color: rgb(19, 112, 118); 
+		cursor: pointer
+		
+	}
+	.ListItem span {
+		position: absolute;
+		right: 10px
+
+	}
+	/* .todo.reminder {
+		border-left: 5px solid greenyellow
+	} */
 }

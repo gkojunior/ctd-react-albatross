@@ -14,6 +14,7 @@ const InputWithLabel = ({
 	}, []);
 	return (
 		<>
+			<div className="checkbox" />
 			<label htmlFor='todoTitle'>{children} </label>
 			<input
 				ref={inputRef}
@@ -21,6 +22,7 @@ const InputWithLabel = ({
 				name='title'
 				value={todoTitle}
 				onChange={handleTitleChange}
+				placeholder='Enter a Task'
 			/>
 		</>
 	);
