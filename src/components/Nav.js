@@ -12,8 +12,8 @@ const Nav = () => {
 		<header className='topnav'>
 			<h3>George Owusu Jr</h3>
 			<nav ref={navRef} >
-				<a href='#/'>Linkedin</a>
-				<a href='#/'>GitHub</a>
+				<a href='https://www.linkedin.com/in/george-owusu-2a853411b/'>Linkedin</a>
+				<a href='https://github.com/gkojunior'>GitHub</a>
 				<a href='#/'>Blog</a>
 				<a href='#/'>Home</a>
 				<button className='nav-btn nav-close-btn' onClick={showNavbar}>
