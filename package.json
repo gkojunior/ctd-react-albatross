@@ -36,8 +36,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
-    "homepage": ""
+    "gh-pages": "^4.0.0"
   }
-  
 }
