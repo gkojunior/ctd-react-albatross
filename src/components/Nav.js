@@ -15,7 +15,7 @@ const Nav = () => {
 				<a href='https://www.linkedin.com/in/george-owusu-2a853411b/' target='blank'>Linkedin</a>
 				<a href='https://github.com/gkojunior' target='blank' >GitHub</a>
 				<a href='https://github.com/gkojunior/hacker-stories' target='blank'>Blog</a>
-				<a href='https://gkojunior.github.io/personal-portfolio/'>Home</a>
+				<a href='https://gkojunior.github.io/personal-portfolio/' target='blank'>Home</a>
 				<button className='nav-btn nav-close-btn' onClick={showNavbar}>
 					<FaTimes />
 				</button>
