@@ -7,13 +7,14 @@
 	margin: 20px auto;
 	width: 250px;
 }
-.task.reminder {
-	border-left: 5px solid greenyellow
+.checkSquare1 {
+    color: rgb(255, 0, 0);
 }
-.checkSquare{
-	color: rgb(19, 112, 118);
-	cursor: pointer;
-	padding-left: 3px;
+.checkSquare2 {
+    color: rgb(16, 121, 0);
+}
+.checkSquare3 {
+    color: rgb(4, 22, 154);
 }
 .ListItem span {
 	position: absolute;
@@ -31,17 +32,18 @@
 		margin: 20px auto;
 		width: 350px;
 	}
-	.checkSquare{
-		color: rgb(19, 112, 118); 
-		cursor: pointer
-		
+	.checkSquare1 {
+		color: rgb(255, 0, 0);
+	}
+	.checkSquare2 {
+		color: rgb(16, 121, 0);
+	}
+	.checkSquare3 {
+		color: rgb(4, 22, 154);
 	}
 	.ListItem span {
 		position: absolute;
 		right: 10px
 
 	}
-	/* .todo.reminder {
-		border-left: 5px solid greenyellow
-	} */
 }
