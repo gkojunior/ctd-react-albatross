@@ -3,7 +3,7 @@ import AddTodoForm from './components/AddTodoForm';
 import Nav from './components/Nav';
 import TodoList from './components/TodoList';
 import './components/App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 	const [todoList, setTodoList] = React.useState([]);
@@ -79,33 +79,25 @@ function App() {
 	};
 
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route
-					path='/'
-					element={
-						<div>
-							<Nav />
-							<h1>To Do List</h1>
-							<div className='todoContainer'>
-								<div className='todoForm'>
-									<AddTodoForm onAddTodo={addTodo} />
-								</div>
+		
+		<div>
+			<Nav />
+			<h1>To Do List</h1>
+			<div className='todoContainer'>
+				<div className='todoForm'>
+					<AddTodoForm onAddTodo={addTodo} />
+				</div>
 
-								<div className='todoList'>
-									{isLoading ? (
-										<p>Loading...</p>
-									) : (
-										<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
-									)}
-								</div>
-							</div>
-						</div>
-					}
-				></Route>
-				<Route path='/new' element={<h1>New Todo List</h1>}></Route>
-			</Routes>
-		</BrowserRouter>
+				<div className='todoList'>
+					{isLoading ? (
+						<p>Loading...</p>
+					) : (
+						<TodoList todoList={todoList} onRemoveTodo={removeTodo} />
+					)}
+				</div>
+			</div>
+		</div>
+					
 	);
 }
 
