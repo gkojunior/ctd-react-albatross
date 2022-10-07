@@ -1,76 +1,75 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /*
 *********** Layout
 */
 body {
-    height: 99vh;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+	height: 99vh;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 }
-h1{
-    text-align: center;
-    padding: 20px;
+h1 {
+	text-align: center;
+	padding: 20px;
 }
 
 .todoContainer {
-    border-radius: 5px;
-    padding: 10px 40px 10px;
-    background: rgba(0, 182, 254, 0.664);
+	border-radius: 5px;
+	padding: 10px 40px 10px;
+	background: rgba(0, 182, 254, 0.664);
 }
 
 .todoList li {
-    margin: 20px auto;
-    background: rgb(255, 238, 0);
-    padding: 10px;
-    border-radius: 5px;
+	margin: 20px auto;
+	background: rgb(255, 238, 0);
+	padding: 10px;
+	border-radius: 5px;
 }
 
 /*
 *********** Navbar
 */
 h3 {
-    color: rgb(244, 208, 63);
-    
+	color: rgb(244, 208, 63);
 }
 .topnav a:hover {
-    background-color: rgb(244, 208, 63);
+	background-color: rgb(244, 208, 63);
 }
 .topnav a {
-    padding: 10px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 5px;
+	padding: 10px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	border-radius: 5px;
 }
 header .nav-btn {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    font-size: 1.25rem;
-    color: rgb(244, 208, 63);
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	font-size: 1.25rem;
+	color: rgb(244, 208, 63);
 }
 
 /*
 *********** Form
 */
 label {
-    color: rgb(244, 208, 63);
-    font-size: 1.4em;
+	color: rgb(244, 208, 63);
+	font-size: 1.4em;
 }
 
 button {
-    background-color: rgb(119, 115, 115);
-    border-radius: 5px;
-    padding: 6px;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 0 5px;
-    transition: all 200ms;
+	background-color: rgb(119, 115, 115);
+	border-radius: 5px;
+	padding: 6px;
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 5px;
+	transition: all 200ms;
 }
 
 /*
@@ -79,183 +78,183 @@ button {
 
 /******** Responsive Navbar  ********/
 @media only screen and (max-width: 767px) {
-    header .nav-btn {
-        visibility: visible;
-        opacity: 1;
-    }
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
 
-    header nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(0, 182, 254);
-        color: rgb(0, 0, 0);
-        gap: 1.5rem;
-        transition: 1s;
-        transform: translateY(-100vh);
-        text-decoration: none;
-        z-index: 1;
-    }
-    header .responsive_nav {
-        transform: none;
-    }
-    nav .nav-close-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        color: rgb(0, 0, 0);
-    }
-    .todoContainer {
-        margin: 100px 200px;
-        display: block;
-    }
-    .topnav a {
-        color: rgb(0, 0, 0);
-    }
+	header nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(0, 182, 254);
+		color: rgb(0, 0, 0);
+		gap: 1.5rem;
+		transition: 1s;
+		transform: translateY(-100vh);
+		text-decoration: none;
+		z-index: 1;
+	}
+	header .responsive_nav {
+		transform: none;
+	}
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		color: rgb(0, 0, 0);
+	}
+	.todoContainer {
+		margin: 100px 200px;
+		display: block;
+	}
+	.topnav a {
+		color: rgb(0, 0, 0);
+	}
 }
 
 /********** Mobile View *************/
 @media only screen and (min-width: 320px) {
-    /* Layout */
-    h3 {
-        display: none;
-    }
-    .todoTitle {
-        color: rgb(11, 11, 11);
-        text-align: center;
-    }
-    .todoList li {
-        font-size: 17px;
-        background: rgb(244, 208, 63);
-        border-radius: 5px;
-    }
-    .todoContainer {
-        margin: 10px;
-        background: rgba(0, 182, 254);
-        padding: 10px;
-    }
-    /* Form */
-    .form {
-        text-align: center;
-        border-bottom: black 2px dotted;
-        padding: 10px;
-    }
-    input {
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        font-size: 15px;
-        border-radius: 5px;
-        padding: 10px 0;
-    }
-    label {
-        display: none;
-    }
-    .todo-row {
-        margin: 2px;
-        padding: 2px;
-    }
+	/* Layout */
+	h3 {
+		display: none;
+	}
+	.todoTitle {
+		color: rgb(11, 11, 11);
+		text-align: center;
+	}
+	.todoList li {
+		font-size: 17px;
+		background: rgb(244, 208, 63);
+		border-radius: 5px;
+	}
+	.todoContainer {
+		margin: 10px;
+		background: rgba(0, 182, 254);
+		padding: 10px;
+	}
+	/* Form */
+	.form {
+		text-align: center;
+		border-bottom: black 2px dotted;
+		padding: 10px;
+	}
+	input {
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+		font-size: 15px;
+		border-radius: 5px;
+		padding: 10px 0;
+	}
+	label {
+		display: none;
+	}
+	.todo-row {
+		margin: 2px;
+		padding: 2px;
+	}
 }
 @media only screen and (min-width: 425px) {
-    header {
-        padding: 5px;
-    }
-    label {
-        display: contents;
-    }
-    .form {
-        border-bottom: black 2px dotted;
-    }
+	header {
+		padding: 5px;
+	}
+	label {
+		display: contents;
+	}
+	.form {
+		border-bottom: black 2px dotted;
+	}
 }
 
 /********** Tablet View *************/
 @media only screen and (min-width: 768px) {
-    h3 {
-        display: contents;
-    }
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 50px;
-        padding: 10px;
-        background-color: rgba(0, 182, 254);
-        color: rgb(0, 0, 0);
-    }
-    nav a {
-        margin: 0 1rem;
-        float: right;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
-    header .nav-btn {
-        padding: 5px;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: rgb(255, 225, 0);
-        visibility: hidden;
-        opacity: 0;
-    }
-    .todoContainer {
-        margin: 20px 150px;
-        padding:  10px 30px;
-        background: rgba(0, 182, 254);
-    }
-    .todoTitle {
-        font-weight: bold;
-        color: rgb(3, 3, 3);
-        font-size: 1.25rem;
-        padding-top: 20px;
-    }
+	h3 {
+		display: contents;
+	}
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 50px;
+		padding: 10px;
+		background-color: rgba(0, 182, 254);
+		color: rgb(0, 0, 0);
+	}
+	nav a {
+		margin: 0 1rem;
+		float: right;
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
+	header .nav-btn {
+		padding: 5px;
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: rgb(255, 225, 0);
+		visibility: hidden;
+		opacity: 0;
+	}
+	.todoContainer {
+		margin: 20px 150px;
+		padding: 10px 30px;
+		background: rgba(0, 182, 254);
+	}
+	.todoTitle {
+		font-weight: bold;
+		color: rgb(3, 3, 3);
+		font-size: 1.25rem;
+		padding-top: 20px;
+	}
 }
 
 /********** Desketop View ***********/
 @media only screen and (min-width: 1024px) {
-    .todoContainer {
-        margin: 20px 130px;
-        display: flex;
-        padding: 30px;
-        background-color:  rgba(0, 182, 254);
-    }
-    .todoForm {
-        border-right: rgb(56, 56, 56) dotted 3px;
-    }
-    .form {
-        padding: 50px 20px;
-        border-bottom: none;
-    }
-    .todoList {
-        padding-left: 25px;
-    }
-    .todoList li {
-        font-size: 20px;
-        background: rgb(244, 208, 63);
-    }
-    .todoTitle {
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-    }
+	.todoContainer {
+		margin: 20px 130px;
+		display: flex;
+		padding: 30px;
+		background-color: rgba(0, 182, 254);
+	}
+	.todoForm {
+		border-right: rgb(56, 56, 56) dotted 3px;
+	}
+	.form {
+		padding: 50px 20px;
+		border-bottom: none;
+	}
+	.todoList {
+		padding-left: 25px;
+	}
+	.todoList li {
+		font-size: 20px;
+		background: rgb(244, 208, 63);
+	}
+	.todoTitle {
+		font-weight: bold;
+		color: rgb(0, 0, 0);
+	}
 }
 @media only screen and (min-width: 1440px) {
-    h1{
-        font-size: 50px;
-    }
-    .todoContainer {
-        margin: 20px 300px;
-        background-color:  rgba(0, 182, 254);
-    }
-    .todoList {
-        padding-left: 80px;
-    }
-    .todoList li {
-        font-size: 20px;
-        background: rgb(244, 208, 63);
-    }
+	h1 {
+		font-size: 50px;
+	}
+	.todoContainer {
+		margin: 20px 300px;
+		background-color: rgba(0, 182, 254);
+	}
+	.todoList {
+		padding-left: 80px;
+	}
+	.todoList li {
+		font-size: 20px;
+		background: rgb(244, 208, 63);
+	}
 }

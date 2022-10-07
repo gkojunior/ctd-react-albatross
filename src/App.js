@@ -79,7 +79,6 @@ function App() {
 	};
 
 	return (
-		
 		<div>
 			<Nav />
 			<h1>To Do List</h1>
@@ -97,7 +96,6 @@ function App() {
 				</div>
 			</div>
 		</div>
-					
 	);
 }
 
